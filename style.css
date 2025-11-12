@@ -1,0 +1,130 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #3a1c71, #d76d77, #ffaf7b);
+    color: #fff;
+}
+
+.container {
+    width: 370px;
+    background: rgba(255,255,255,0.1);
+    padding: 25px;
+    border-radius: 15px;
+    backdrop-filter: blur(6px);
+    box-shadow: 0 0 18px rgba(0,0,0,0.45);
+}
+.container h1 {
+    text-align: center;
+    font-size: 26px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.input-area {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 18px;
+}
+
+#task-input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    background: #ffffffcc;
+}
+
+#task-input::placeholder {
+    color: #555;
+}
+
+#add-btn {
+    padding: 10px 15px;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    background: #ffffffdd;
+    color: #000;
+    transition: 0.3s;
+}
+
+#add-btn:hover {
+    background: #ffffff;
+    transform: scale(1.05);
+}
+
+ul {
+    list-style: none;
+    max-height: 270px;
+    overflow-y: auto;
+    padding-right: 6px;
+}
+
+ul::-webkit-scrollbar {
+    width: 6px;
+}
+ul::-webkit-scrollbar-thumb {
+    background: #ffffff44;
+    border-radius: 10px;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255,255,255,0.2);
+    padding: 10px;
+    margin-bottom: 8px;
+    border-radius: 8px;
+    font-size: 16px;
+    border-left: 4px solid #551c1c;
+    transition: 0.25s ease;
+}
+
+li:hover {
+    transform: scale(1.03);
+    background: rgba(255,255,255,0.3);
+}
+
+li.completed {
+    background: rgba(255,255,255,0.12);
+    border-left: 4px solid white;
+}
+
+li.completed .task-text {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+.delete-btn {
+    background: rgba(255, 40, 40, 0.18);
+    color: #ff3b3b;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.delete-btn:hover {
+    background: #ff3b3b;
+    color: #fff;
+    box-shadow: 0 0 8px rgba(255, 59, 59, 0.5);
+    transform: scale(1.08);
+}
